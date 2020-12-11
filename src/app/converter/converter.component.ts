@@ -9,6 +9,16 @@ export class ConverterComponent implements OnInit {
 
   constructor() { }
 
+  amount = 1;
+  from = "CAD";
+  to = "USD";
+  rate= 0.87;
+
+  convert(): number
+  {
+    return this.amount * this.rate;
+  }
+
   ngOnInit(): void {
   }
 
