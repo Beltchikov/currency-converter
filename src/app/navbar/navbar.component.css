@@ -1,0 +1,14 @@
+header{
+  background-color: rgb(20, 20, 228);
+  padding: 15px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+}
+
+a:hover{
+  background-color: rgb(6, 6, 104);
+}
