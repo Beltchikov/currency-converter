@@ -5,5 +5,5 @@
   <br />
   <br />
   <br />
-  <b>{{ amount.toFixed(2) }} {{ from }} = {{ convert().toFixed(2) }}{{ to }}</b>
+  <b [style.color] = "amount < 0 ? 'red' : ''">{{ amount.toFixed(2) }} {{ from }} = {{ convert().toFixed(2) }}{{ to }}</b>
 </div>
