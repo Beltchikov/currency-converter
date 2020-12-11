@@ -1,5 +1,7 @@
 export interface ExchangeRatesResponse {
-  rates:{},
+  rates:{
+    [key:string]:number
+  },
   base: string,
   date: string
 }

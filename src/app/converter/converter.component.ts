@@ -9,20 +9,26 @@ import { ExchangeRatesService } from '../services/exchange-rates.service';
 export class ConverterComponent implements OnInit {
 
   constructor(private exchangeRatesService: ExchangeRatesService) {
-    this.exchangeRatesService.getRates(this.to).subscribe(r => console.log(r));
+
   }
 
   amount = 1;
   from = "CAD";
   to = "USD";
-  rate= 0.87;
+  rates: {[key: string]:number};
+
+  loadRates()
+  {
+    this.exchangeRatesService.getRates(this.from).subscribe(r => this.rates = r.rates);
+  }
 
   convert(): number
   {
-    return this.amount * this.rate;
+    return this.amount * this.rates[this.to];
   }
 
   ngOnInit(): void {
+    this.loadRates();
   }
 
 }
