@@ -3,7 +3,7 @@
   text-align: center;
 }
 
-input
+input, select
 {
   border: 1px gray solid;
   padding: 3px;
